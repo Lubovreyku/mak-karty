@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>✨Ваше послание✨</title>
+  <style>
+    body {
+      background-image: url('background.jpg');
+      background-size: cover;
+      background-attachment: fixed;
+      font-family: 'Segoe UI', sans-serif;
+      text-align: center;
+      padding: 50px;
+      color: #fff8e1;
+    }
+    h1 {
+      font-size: 2em;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 4px #000;
+    }
+    button {
+      padding: 12px 24px;
+      font-size: 1em;
+      background-color: #ffcc80;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      box-shadow: 2px 2px 6px #000;
+      transition: 0.3s;
+    }
+    button:hover {
+      background-color: #ffe0b2;
+    }
+    #card-container {
+      margin-top: 30px;
+    }
+    #card {
+      max-width: 400px;
+      border-radius: 20px;
+      box-shadow: 4px 4px 10px #000;
+    }
+  </style>
+</head>
+<body>
+  <h1>✨ Ваше послание ✨</h1>
+  <button onclick="pullCard()">Тянуть карту</button>
+  <div id="card-container">
+    <img id="card" src="" alt="Карта" />
+  </div>
+
+  <script>
+    const cards = [
+      "card1.png", "card2.png", "card3.png", "card4.png", "card5.png",
+      "card6.png", "card7.png", "card8.png", "card9.png", "card10.png", "card11.png"
+    ];
+    function pullCard() {
+      const random = Math.floor(Math.random() * cards.length);
+      document.getElementById("card").src = cards[random];
+    }
+  </script>
+</body>
+</html>
